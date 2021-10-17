@@ -3,18 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { FeatureFlagStore } from './context/featureFlags'
-
-const featureFlags = {
-  is_logo_enabled: false,
-  is_something_else_enabled: false
-}
 
 ReactDOM.render(
   <React.StrictMode>
-    <FeatureFlagStore initialState={featureFlags}>
-      <App />
-    </FeatureFlagStore>
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
